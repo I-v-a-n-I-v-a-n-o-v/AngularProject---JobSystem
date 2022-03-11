@@ -1,0 +1,67 @@
+.topnav {
+  background-color: rgb(216, 216, 216, 0.90);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 75px;
+  margin: 0;
+  padding: 5px 0;
+  margin-bottom: 3em;
+}
+
+/* Style the links inside the navigation bar */
+.topnav li {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  margin: 1px 0.2em;
+  padding: 11px 12px;
+  text-decoration: none;
+  font-size: 1.5em;
+  list-style: none;
+  border-radius: 10px;
+  // top: 50%;
+  // left: 50%;
+}
+
+.topnav .signup {
+  margin-right: 0.5em;
+}
+
+.topnav .login,
+.signup {
+  float: right !important;
+}
+
+.topnav .logout,
+.greeting {
+  float: right !important;
+}
+
+.topnav li a {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+}
+
+/* Change the color of links on hover */
+.topnav li:hover {
+  background-color: rgb(238, 238, 238);
+  color: black;
+}
+
+.no-bullet {
+  list-style-type: none;
+  outline: none;
+  border: 0;
+  background-color: rgb(216, 216, 216, 0.90);
+}
+
+.no-bullet:hover {
+  color: rgb(252, 2, 2);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Add a color to the active/current link */
+// .topnav a.active {
+//   background-color: #04AA6D;
+//   color: white;
+// }

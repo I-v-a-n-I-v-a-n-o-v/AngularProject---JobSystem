@@ -1,0 +1,18 @@
+<div>
+  <ul class="topnav">
+    <li class="home"><a class="active" routerLink="/home">Home</a></li>
+    <li class="jobs"><a routerLink="/home/jobs">Jobs</a></li>
+    <li class="myJobs"><a routerLink="/myJobs">My Jobs</a></li>
+
+    <li class="createJob"><a routerLink="/home/create">Create Job</a></li>
+    <li class="published"><a routerLink="/home/published">Published Jobs</a></li>
+
+    <li class="signup" *ngIf="!isLogged"><a routerLink="/signup">Create Account</a></li>
+    <li class="login" *ngIf="!isLogged"><a routerLink="/login">Login</a></li>
+    <li class="logout" *ngIf="isLogged"><button class="no-bullet" type="submit" (click)="onSubmit()">Logout</button>
+    </li>
+    <li class="greeting" *ngIf="isLogged">Hello there!</li>
+
+  </ul>
+
+</div>

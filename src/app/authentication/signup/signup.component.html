@@ -1,0 +1,89 @@
+<!-- <div class="container"> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-md-6"> -->
+<div class="card">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="text-center">
+            <h1>JobSystem Signup</h1>
+            <h5>Free to signup</h5>
+        </div>
+
+        <div *ngIf="isUser" class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username:" formControlName="username">
+
+            <small
+                *ngIf="usernameFormControl?.touched && usernameFormControl?.invalid && usernameFormControl.errors?.['required']">This
+                field is required!(username)</small>
+            <small
+                *ngIf="usernameFormControl?.touched && usernameFormControl.invalid && usernameFormControl.errors?.['minlength']">This
+                field should contains min {{usernameFormControl.errors?.['minlength'].requiredLength}}(username)</small>
+        </div>
+
+        <div *ngIf="!isUser" class="mb-3">
+            <label for="organisationName" class="form-label">Organization</label>
+            <input type="text" class="form-control" id="organisation" placeholder="Organisation name:"
+                formControlName="organisationName">
+
+            <small
+                *ngIf="organisationFormControl?.touched && organisationFormControl?.invalid && organisationFormControl.errors?.['required']">This
+                field is required!(orgName)</small>
+            <small
+                *ngIf="organisationFormControl?.touched && organisationFormControl.invalid && organisationFormControl.errors?.['minlength']">This
+                field should contains min
+                {{organisationFormControl.errors?.['minlength'].requiredLength}}(orgName)</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Email:" formControlName="email">
+
+            <small
+                *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl.errors?.['required']">This
+                field is required!(email)</small>
+            <small
+                *ngIf="emailFormControl?.touched && emailFormControl.invalid && emailFormControl.errors?.['minlength']">This
+                field should contains min {{emailFormControl.errors?.['minlength'].requiredLength}}(email)</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password"
+                placeholder="password:">
+
+            <small
+                *ngIf="passwordFormControl?.touched && passwordFormControl?.invalid && passwordFormControl.errors?.['required']">This
+                field is required!(password)</small>
+            <small
+                *ngIf="passwordFormControl?.touched && passwordFormControl.invalid && passwordFormControl.errors?.['minlength']">This
+                field should contains min {{passwordFormControl.errors?.['minlength'].requiredLength}}(password)</small>
+
+        </div>
+
+
+        <!-- switch button -->
+        <!-- <div class="switchBtn"> -->
+
+        <div class="wholeSwitch">
+            <label class="switch">
+                <input type="checkbox" id="toggBtn" (change)="onSwitch()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <small id="switchInfo">Login as Organisation</small>
+        <!-- </div> -->
+
+
+        <div class="col text-center">
+            <button class="btn btn-primary" type="submit">Signup</button>
+        </div>
+    </form>
+    <small class="loginRLink">Already have an account?<a routerLink="/login" class="btn-link">Login</a></small>
+</div>
+
+
+
+<!-- </div> -->
+<!-- </div> -->
+
+<!-- </div> -->

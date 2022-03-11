@@ -1,0 +1,92 @@
+// .container{
+//   height: 100%;
+// }
+
+.card {
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 100%;
+  padding: 45px 45px 20px 45px;
+  transform: translate(-50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(255, 255, 255, 0.97);
+  ;
+  text-align: center;
+  margin-bottom: 1em;
+  // background-image: linear-gradient(to right top, #397eff, #00a6ff, #00c5ff, #00dddd, #00efb0, #4bef88, #79ec57, #a5e600, #c7d200, #e0bd00, #f3a700, #ff911a);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 33% 33% 33%;
+  margin-bottom: 50px;
+}
+
+.title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.description {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.category {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.organisationName {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+//button
+.card .btn {
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(to right, #F4FF00, #26C433, #0000FF);
+}
+
+.card .btn:hover {
+  background: linear-gradient(to right, #0000FF, #26C433, #F4FF00) !important;
+}
+
+
+.textarea {
+  background-color: #dddddd;
+  color: #000000;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 90%;
+  height: 60px;
+  transition: all 0.3s;
+}
+
+.textarea:hover {
+  cursor: pointer;
+  background-color: #ececec;
+  color: #3f3f3f;
+}
+
+.textarea:focus {
+  cursor: text;
+  color: #696969;
+  background-color: rgb(255, 255, 255);
+  border-color: #333333;
+}
+
+.likes {
+  font-size: 1.5em;
+}

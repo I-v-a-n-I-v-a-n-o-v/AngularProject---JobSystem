@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="card" *ngFor="let title of jobsArray">
+    <form [formGroup]="formGroup" class="form" (ngSubmit)="onSubmit(buttonType, title.id)">
+
+      <!-- Title -->
+      <div class="mb-3 title">
+        <h3>Title</h3>
+
+        <textarea class="textarea" style="resize: none" id="title" name="title" formControlName="title" rows="3"
+          cols="55" placeholder="{{title.jobTitle}}" disable></textarea>
+        <!-- [(ngModel)]="title.description" -->
+        <!-- placeholder="{{title.description}}" -->
+
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3 description">
+        <h3>Description</h3>
+
+        <!-- <input type="" class="form-control" id="description" formControlName="description"
+                placeholder="Description:"> -->
+        <div *ngIf="!condition">
+          <input class="textarea" style="resize: none" id="description" name="description" formControlName="description"
+            rows="3" cols="55" placeholder="{{title.description}}" disable>
+        </div>
+
+
+        <!--<div *ngIf="condition">
+                    <input class="textarea" style="resize: none" id="description" name="description"
+                        formControlName="editedDecsription" rows="3" cols="55" [placeholder]="title.description">
+                </div>
+            -->
+
+      </div>
+
+      <!-- Job Type -->
+      <div class="mb-3 type">
+        <h3>Type</h3>
+
+        <select name="type" id="jobType" formControlName="type" disable>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="In Office" [disabled]="true">In Office</option>
+          <option value="Remote" [selected]="true">{{title.jobType}}</option>
+        </select>
+
+      </div>
+
+      <!-- Category -->
+      <div class="mb-3 category">
+        <h3>Category</h3>
+        <textarea class="textarea" style="resize: none" id="category" name="category" formControlName="category"
+          rows="3" cols="55" placeholder="{{title.category}}" disable></textarea>
+
+
+      </div>
+
+      <!-- Organisation Name -->
+      <div class="mb-3 organisationName">
+        <h3>Organisation</h3>
+        <textarea disable class="textarea" style="resize: none" id="organisationName" name="organisationName"
+          formControlName="organisationName" rows="3" cols="55" placeholder="{{title.jobPublisher}}"></textarea>
+        <!-- placeholder="{{title.jobPublisher}}" -->
+
+      </div>
+
+
+      <p class="likes">Likes: {{title.likes}}</p>
+
+      <div class="col text-center">
+        <button class="btn btn-primary edit" type="submit" (click)="onSubmit('Edit', title.id)">Edit</button>
+      </div>
+
+      <div class=" col text-center" *ngIf="condition === true">
+        <button class="btn btn-primary save" type="submit" (click)="onSubmit('Save', title.id)">Save</button>
+      </div>
+
+      <div class=" col text-center" *ngIf="condition === false">
+        <button class="btn btn-primary delete" type="submit" (click)="onSubmit('Delete', title.id)">Delete</button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="card">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(buttonType)">
+    <div class="text-center">
+      <h1>Edit the job</h1>
+    </div>
+
+    <!-- Title -->
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Title:" formControlName="title">
+
+      <small
+        *ngIf="titleFormControl?.touched && titleFormControl?.invalid && titleFormControl.errors?.['required']">This
+        field is required!</small>
+      <small
+        *ngIf="titleFormControl?.touched && titleFormControl.invalid && titleFormControl.errors?.['minlength']">This
+        field should contains min {{titleFormControl.errors?.['minlength'].requiredLength}}</small>
+      <small
+        *ngIf="titleFormControl?.touched && titleFormControl.invalid && titleFormControl.errors?.['maxlength']">This
+        field should contains max {{titleFormControl.errors?.['maxlength'].requiredLength}}</small>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <!-- <input type="" class="form-control" id="description" formControlName="description"
+                placeholder="Description:"> -->
+      <textarea style="resize: none" id="description" name="description" formControlName="description" rows="3"
+        cols="55">
+
+                    </textarea>
+
+      <small
+        *ngIf="descriptionFormControl?.touched && descriptionFormControl?.invalid && descriptionFormControl.errors?.['required']">This
+        field is required!</small>
+      <small
+        *ngIf="descriptionFormControl?.touched && descriptionFormControl?.invalid && descriptionFormControl.errors?.['minlength']">This
+        field should contains min {{descriptionFormControl.errors?.['minlength'].requiredLength}}</small>
+    </div>
+
+    <!-- Job Type -->
+    <div class="mb-3">
+      <label for="type" class="form-label">Type</label>
+      <br>
+
+      <select name="type" id="jobType" [disabled]="false">
+        <option value="Full-Time">Full-Time</option>
+        <option value="Part-Time">Part-Time</option>
+        <option value="In Office" [disabled]="true">In Office</option>
+        <option value="Remote" [selected]="true">Remote</option>
+      </select>
+    </div>
+
+    <!-- Category -->
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <input type="text" class="form-control" id="category" formControlName="category" placeholder="e.g: Development">
+
+      <small
+        *ngIf="categoryFormControl?.touched && categoryFormControl?.invalid && categoryFormControl.errors?.['required']">This
+        field is required!</small>
+      <small
+        *ngIf="categoryFormControl?.touched && categoryFormControl?.invalid && categoryFormControl.errors?.['minlength']">This
+        field should contains min {{categoryFormControl.errors?.['minlength'].requiredLength}}</small>
+      <small
+        *ngIf="categoryFormControl?.touched && categoryFormControl?.invalid && categoryFormControl.errors?.['maxlength']">This
+        field should contains max {{categoryFormControl.errors?.['maxlength'].requiredLength}}</small>
+    </div>
+
+    <!-- Organisation Name -->
+    <div class="mb-3">
+      <label for="organisationName" class="form-label">Organisation</label>
+      <input type="text" class="form-control" id="organisationName" formControlName="organisationName"
+        placeholder="Organisation name:">
+
+      <small
+        *ngIf="categoryFormControl?.touched && categoryFormControl?.invalid && categoryFormControl.errors?.['required']">This
+        field is required!</small>
+      <small
+        *ngIf="categoryFormControl?.touched && categoryFormControl?.invalid && categoryFormControl.errors?.['minlength']">This
+        field should contains min {{categoryFormControl.errors?.['minlength'].requiredLength}}</small>
+      <small
+        *ngIf="organisationNameFormControl?.touched && organisationNameFormControl?.invalid && organisationNameFormControl.errors?.['maxlength']">This
+        field should contains max {{organisationNameFormControl.errors?.['maxlength'].requiredLength}}</small>
+    </div>
+
+    <div class="col text-center">
+      <button class="btn btn-primary" type="submit" (click)="onSubmit('Save')">Save</button>
+    </div>
+    <div class=" col text-center">
+      <button class="btn btn-primary" type="submit" (click)="onSubmit('Delete')">Delete</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="card" *ngFor="let title of jobsArray">
+    <form [formGroup]="formGroup" class="form">
+
+      <!-- Title -->
+      <div class="mb-3 title">
+        <h3>Title</h3>
+        <textarea class="textarea" style="resize: none" id="title" name="title" formControlName="title" rows="3"
+          cols="55" placeholder="{{title.jobTitle}}"></textarea>
+        <!-- [(ngModel)]="title.description" -->
+
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3 description">
+        <h3>Description</h3>
+        <!-- <input type="" class="form-control" id="description" formControlName="description"
+                placeholder="Description:"> -->
+        <textarea class="textarea" style="resize: none" id="description" name="description"
+          formControlName="description" rows="3" cols="55" placeholder="{{title.description}}"></textarea>
+      </div>
+
+      <!-- Job Type -->
+      <div class="mb-3 type">
+        <h3>Type</h3>
+        <textarea class="textarea" style="resize: none" id="jobType" name="jobType" rows="3" cols="55"
+          placeholder="{{title.jobType}}" disabled></textarea>
+
+        <!--<select name="type" id="jobType" [disabled]="true">
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="In Office" [disabled]="true">In Office</option>
+          <option value="Remote" [selected]="true">{{title.jobType}}</option>
+        </select>-->
+
+      </div>
+
+      <!-- Category -->
+      <div class="mb-3 category">
+        <h3>Category</h3>
+        <textarea class="textarea" style="resize: none" id="category" name="category" formControlName="category"
+          rows="3" cols="55" placeholder="{{title.category}}"></textarea>
+
+
+      </div>
+
+      <!-- Organisation Name -->
+      <div class="mb-3 organisationName">
+        <h3>Organisation</h3>
+        <textarea class="textarea" style="resize: none" id="organisationName" name="organisationName"
+          formControlName="organisationName" rows="3" cols="55" placeholder="{{title.jobPublisher}}"></textarea>
+
+      </div>
+
+      <!-- <div class="mb-3 likes">
+                <textarea placeholder="{{title.likes}}" style="resize: none" id="likes" name="likes"
+                    formControlName="likes" rows="3" cols="55"></textarea>
+
+
+
+            </div> -->
+
+      <p class="likes">Likes: {{title.likes}}</p>
+
+      <div class="col text-center">
+        <button class="btn btn-primary" type="submit">Apply</button>
+      </div>
+      <div class="col text-center">
+        <button class="btn btn-primary" type="submit">Like</button>
+      </div>
+    </form>
+  </div>
+</div>

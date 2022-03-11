@@ -1,0 +1,44 @@
+<!-- we have forgotten to add the 'onSubmit' methid and to create separate controllers for the cotrolsconfig objects  -->
+
+<div class="card">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="text-center">
+      <h1>JobSystem Login</h1>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" placeholder="Email:" formControlName="email">
+
+      <small
+        *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl.errors?.['required']">This
+        field is required!</small>
+      <small *ngIf="emailFormControl?.touched && emailFormControl.invalid && emailFormControl.errors?.['minlength']">This field should contains min {{emailFormControl.errors?.['minlength'].requiredLength}}</small>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password" placeholder="password:">
+
+      <small
+        *ngIf="passwordFormControl?.touched && passwordFormControl?.invalid && passwordFormControl.errors?.['required']">This
+        field is required!</small>
+        <small *ngIf="passwordFormControl?.touched && passwordFormControl.invalid && passwordFormControl.errors?.['minlength']">This field should contains min {{passwordFormControl.errors?.['minlength'].requiredLength}}</small>
+
+    </div>
+
+    <div class="wholeSwitch">
+      <label class="switch">
+        <input type="checkbox" id="toggBtn" (change)="onSwitch()">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <small id="switchInfo">Signup as organisation</small>
+
+    <div class="col text-center">
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>
+
+  </form>
+  <small class="signupRLink">Don't have an account?<a routerLink="/signup" class="btn-link txt2">Sign Up</a></small>
+</div>

@@ -1,0 +1,279 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "username": "Plamkata",
+      "email": "plamko@gmail.com",
+      "password": "plamkatapass"
+    },
+    {
+      "email": "aaaaaaaaaa",
+      "username": "aaaaaaaaa",
+      "password": "aaaaaaaaaa",
+      "id": 2
+    }
+  ],
+  "Organisation": [
+    {
+      "id": 1,
+      "organisationName": "PlamenHolding",
+      "email": "plamko@gmail.com",
+      "password": "plamkatapass"
+    },
+    {
+      "organisationName": "NoName",
+      "email": "ivan.ivanov3902@gmail.com",
+      "password": "aaaaaaaaaa",
+      "id": 2
+    },
+    {
+      "organisationName": "IvanHolding",
+      "email": "ivan.ivanov32@gmail.com",
+      "password": "1111111111",
+      "id": 3
+    }
+  ],
+  "Job": [
+    {
+      "id": 1,
+      "jobTitle": "IT specialist",
+      "description": "IT sector",
+      "likes": 20,
+      "jobType": "remote",
+      "jobPublisher": "PlamenHolding",
+      "category": "Development"
+    },
+    {
+      "id": 2,
+      "jobTitle": "Ophthalmology",
+      "description": "eye",
+      "likes": 20,
+      "jobType": "full-time",
+      "jobPublisher": "IvanHolding",
+      "category": "Medicine"
+    },
+    {
+      "jobTitle": "ivan",
+      "description": "ivan",
+      "likes": 0,
+      "jobType": "",
+      "category": "Ivan",
+      "jobPublisher": "IvanHolding",
+      "id": 3
+    },
+    {
+      "jobTitle": "",
+      "description": "",
+      "likes": 0,
+      "jobType": "",
+      "category": "",
+      "jobPublisher": "",
+      "id": 4
+    },
+    {
+      "jobTitle": "111",
+      "description": "111",
+      "likes": 0,
+      "jobType": "",
+      "category": "111",
+      "jobPublisher": "111",
+      "id": 5
+    },
+    {
+      "jobTitle": "666",
+      "description": "666",
+      "likes": 0,
+      "jobType": null,
+      "category": "666",
+      "jobPublisher": "666",
+      "id": 6
+    },
+    {
+      "jobTitle": "z",
+      "description": "z",
+      "likes": 0,
+      "jobType": "",
+      "category": "z",
+      "jobPublisher": "z",
+      "id": 7
+    },
+    {
+      "jobTitle": "777",
+      "description": "777",
+      "likes": 0,
+      "jobType": "full-time",
+      "category": "777",
+      "jobPublisher": "777",
+      "id": 8
+    },
+    {
+      "jobTitle": "",
+      "description": "",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "",
+      "jobPublisher": "",
+      "id": 9
+    },
+    {
+      "jobTitle": "Junior Developer",
+      "description": "Programmer",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "IT",
+      "jobPublisher": "IvanHolding",
+      "id": 10
+    },
+    {
+      "jobTitle": "ccccccccccccc",
+      "description": "cddwwdwdwdw\ndw\ndwdwd",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "cccccccccccc",
+      "jobPublisher": "cccccccccccccccc",
+      "id": 11
+    },
+    {
+      "jobTitle": "aaaa",
+      "description": "aaaaa",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "aaaaa",
+      "jobPublisher": "aaaaa",
+      "id": 12
+    },
+    {
+      "jobTitle": "bbbbbbbb",
+      "description": "bbbbbbbbbbbb",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "bbbbbbbbb",
+      "jobPublisher": "bbbbbbbbbbbbb",
+      "id": 13
+    },
+    {
+      "jobTitle": "ssss",
+      "description": "ssss",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "sssss",
+      "jobPublisher": "ssss",
+      "id": 14
+    },
+    {
+      "jobTitle": "sss",
+      "description": "sss",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "ss",
+      "jobPublisher": "ssss",
+      "id": 15
+    },
+    {
+      "jobTitle": "cccccccc",
+      "description": "cccccccccc",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "cccccccccccc",
+      "jobPublisher": "cccccccccc",
+      "id": 16
+    },
+    {
+      "jobTitle": "mmmmm",
+      "description": "mmmmmmmm",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "mmm",
+      "jobPublisher": "mmmmm",
+      "id": 17
+    },
+    {
+      "jobTitle": "ppppppp",
+      "description": "ppp",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "pppppppppppppp",
+      "jobPublisher": "pppppppp",
+      "id": 18
+    },
+    {
+      "jobTitle": "pppppppp",
+      "description": "pppppppppppp",
+      "likes": 0,
+      "jobType": "Remote",
+      "category": "ppppppp",
+      "jobPublisher": "pppppp",
+      "id": 19
+    },
+    {
+      "jobTitle": "ffsdfcdsfdsfds",
+      "description": "sdfdsfdsfdsfs",
+      "likes": 0,
+      "jobType": "Part-Time",
+      "category": "dfsdfsdfsdf",
+      "jobPublisher": "IvanHolding",
+      "userId": 3,
+      "id": 20
+    },
+    {
+      "jobTitle": "fsdfs",
+      "description": "fsdfdfsdf",
+      "likes": 0,
+      "jobType": "Part-Time",
+      "category": "sdfsdfsd",
+      "jobPublisher": "fsdfsdfsdf",
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "jobTitle": "phytj",
+      "description": " jtyjytj",
+      "likes": 0,
+      "jobType": "Remote",
+      "category": "tyjtyjty",
+      "jobPublisher": "jtyj",
+      "userId": 3,
+      "id": 22
+    },
+    {
+      "jobTitle": "erregeg",
+      "description": "ergergergerg",
+      "likes": 0,
+      "jobType": "Full-Time",
+      "category": "ergerggergreg",
+      "jobPublisher": "IvanHolding",
+      "userId": 3,
+      "id": 23
+    },
+    {
+      "jobTitle": "jobata11122233444555333",
+      "description": "jobata111222333344555333",
+      "category": "jobata1122233445533",
+      "jobPublisher": "jobataaaa1112233445533",
+      "jobType": "Remote",
+      "likes": 0,
+      "id": 24,
+      "userId": 1
+    },
+    {
+      "jobTitle": "kalata",
+      "description": "1111",
+      "category": "11114444",
+      "jobPublisher": "11111",
+      "jobType": "Remote",
+      "likes": 0,
+      "id": 25,
+      "userId": 1
+    },
+    {
+      "jobTitle": "1111222",
+      "description": "11122",
+      "category": "1122",
+      "jobPublisher": "111222",
+      "jobType": "Remote",
+      "likes": 0,
+      "id": 26,
+      "userId": 1
+    }
+  ]
+}
